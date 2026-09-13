@@ -1,6 +1,8 @@
 
 main:
     # x5=a, x6=b, x7=i, x29=j & x10=baseOf-D
+    li x5, 5 # a=5
+    li x7, 0
     li x10, 0x1000
     #######
 for1:bge x7, x5, end

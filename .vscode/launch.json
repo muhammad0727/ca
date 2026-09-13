@@ -11,12 +11,12 @@
             "program": "${file}",
             "stopOnEntry": true,
             "stopAtBreakpoints": true,
-            "openViews": [
-                "Robot",
-                "LED Matrix",
-                "Seven Segment Board",
-                "Memory"
-            ],
+//            "openViews": [
+//                "Robot",
+//                "LED Matrix",
+//                "Seven Segment Board",
+//               "Memory"
+//            ],
             "ledMatrixSize": {
                 "x": 10,
                 "y": 10

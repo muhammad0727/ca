@@ -4,7 +4,7 @@ main:
 #initializing with random vals
     li x22 10
     li x23 20
-
+    li x20 1
     #switch case code
     # case values in temp registers
     li x28, 1
