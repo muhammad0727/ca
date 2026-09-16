@@ -10,14 +10,12 @@ main:
     mv x29, x6
     
 loop:
-    
 
-
-    #lw x30, 0(x28)
+    #loading the value from y[i]
     lb x30, 0(x29)
-
+    # storing it immediately in x[i]
     sb x30, 0(x28)
-    
+    #end condition
     beq x30, x0, end
     
     addi x28, x28, 1
