@@ -4,6 +4,7 @@ main:
     li x5, 5 # a=5
     li x7, 0
     li x10, 0x1000
+    li x6, 3
     #######
 for1:bge x7, x5, end
     li x29, 0 #j=0
@@ -14,7 +15,7 @@ for2:bge x29, x6, next
     add x10, x12, x10 # baseOf-D + j*4
     sw x11, 0(x10) # D[j*4] = i + j
     addi x29, x29, 1 # j++
-    j for2
+        j for2
 next:
     addi x7, x7, 1 #i++
     j for1

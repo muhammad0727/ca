@@ -5,6 +5,12 @@ main:
     li x11, 3
     li x12, 4
     li x13, 5
+    ### saved registers--dummy
+    li x18, 4
+    li x19, 5
+    li x20, 6
+    
+
     jal x1, leaf_exp
     # jump out of code
     j end
