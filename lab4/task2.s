@@ -2,7 +2,7 @@ main:
 
  addi x10 , x0 , 5 # argument n = 5
  jal x1 , ntri # call ntri(n)
- addi x11, x10, 0 # store result in x10
+ addi x11, x10, 0 # store result in x11
  li x10, 1 # load 1 into x10
  ecall
  # exit program

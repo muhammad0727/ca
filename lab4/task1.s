@@ -1,6 +1,6 @@
 main:
 
- addi x10 , x0 , 3 # argument n = 5
+ addi x10 , x0 , 3 # argument n = 3
  jal x1 , fact # call fact(n)
 
  # exit program
@@ -35,3 +35,19 @@ end:
 
 # ITERATIVE METHOD
 
+# x10 = n
+# result will be kept in x5
+li x10, 3 
+fact_iter:
+    addi x5, x0, 1       # acc = 1
+
+loop:
+    beq x10, x0, done    # if n == 0, finish
+
+    mul x5, x5, x10      # acc = acc * n
+    addi x10, x10, -1    # n = n - 1
+    jal x0, loop         # repeat
+
+done:
+    addi x10, x5, 0      # return value in x10
+    jalr x0, 0(x1)       # return
