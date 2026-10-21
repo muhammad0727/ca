@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="770" viewBox="0 0 1100 770" font-family="Arial, Helvetica, 'DejaVu Sans', sans-serif">
+<title>32-bit ALU</title><desc>Lab 6 Task 1(b): 32-bit RV32I ALU block diagram</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0,0 L 10,5 L 0,10 z" fill="#1f2937"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="40" y="38" font-size="21" text-anchor="start" font-weight="bold" fill="#111827">Task 1(b): 32-bit ALU (ADD, SUB, SLL, SRL, AND, OR, XOR; BEQ = SUB + Zero)</text>
+<text x="40" y="62" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Word-level view of ALU.v. Every block below is 32 bits wide unless marked.</text>
+<text x="40" y="105" font-size="15" text-anchor="start" font-weight="bold" fill="#111827">A[31:0]</text>
+<text x="40" y="135" font-size="15" text-anchor="start" font-weight="bold" fill="#111827">B[31:0]</text>
+<polyline points="110,100 250,100 250,545" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="110,130 280,130 280,595" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<line x1="174" y1="108" x2="186" y2="92" stroke="#1f2937" stroke-width="1.5"/>
+<text x="180" y="89" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<line x1="194" y1="138" x2="206" y2="122" stroke="#1f2937" stroke-width="1.5"/>
+<text x="200" y="119" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="250,160 360,160" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="280,180 360,180" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="250" cy="160" r="4" fill="#1f2937"/>
+<circle cx="280" cy="180" r="4" fill="#1f2937"/>
+<path d="M 360,150 h 30 a 20,20 0 0 1 0,40 h -30 z" fill="#dbeafe" stroke="#1f2937" stroke-width="2"/>
+<polyline points="250,225 365.6,225" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="280,245 365.6,245" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="250" cy="225" r="4" fill="#1f2937"/>
+<circle cx="280" cy="245" r="4" fill="#1f2937"/>
+<path d="M 360,215 Q 375,235 360,255 Q 400,255 415,235 Q 400,215 360,215 z" fill="#dbeafe" stroke="#1f2937" stroke-width="2"/>
+<polyline points="250,290 365.6,290" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="280,310 365.6,310" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="250" cy="290" r="4" fill="#1f2937"/>
+<circle cx="280" cy="310" r="4" fill="#1f2937"/>
+<path d="M 360,280 Q 375,300 360,320" fill="none" stroke="#1f2937" stroke-width="2"/>
+<path d="M 368,280 Q 383,300 368,320 Q 408,320 423,300 Q 408,280 368,280 z" fill="#dbeafe" stroke="#1f2937" stroke-width="2"/>
+<text x="385" y="138" font-size="12" text-anchor="middle" font-weight="normal" fill="#1e40af" font-style="italic">logic unit (32 gates each)</text>
+<circle cx="280" cy="388" r="4" fill="#1f2937"/>
+<polyline points="280,388 390,388" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="280" cy="428" r="4" fill="#1f2937"/>
+<polyline points="280,428 310,428" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M 310,416 L 336,428 L 310,440 z" fill="#ffedd5" stroke="#1f2937" stroke-width="2"/>
+<circle cx="340" cy="428" r="4" fill="white" stroke="#1f2937" stroke-width="2"/>
+<polyline points="344,428 390,428" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<text x="352" y="448" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">~B</text>
+<polygon points="390,368 420,383 420,433 390,448" fill="#f3f4f6" stroke="#1f2937" stroke-width="2"/>
+<text x="396" y="392" font-size="11" text-anchor="start" font-weight="normal" fill="#111827">0</text>
+<text x="396" y="432" font-size="11" text-anchor="start" font-weight="normal" fill="#111827">1</text>
+<polyline points="420,408 480,408" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<text x="450" y="402" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">B'</text>
+<polyline points="250,355 480,355" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<rect x="480" y="340" width="120" height="120" rx="6" fill="#ffedd5" stroke="#1f2937" stroke-width="2"/>
+<text x="540.0" y="381.7" font-size="12" text-anchor="middle" font-weight="bold" fill="#111827">32-bit adder</text>
+<text x="540.0" y="396.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">A + B' + Cin</text>
+<text x="540.0" y="411.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">(32 chained</text>
+<text x="540.0" y="426.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">full adders)</text>
+<polygon points="760,130 830,160 830,630 760,660" fill="#f3f4f6" stroke="#1f2937" stroke-width="2"/>
+<text x="766" y="174" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0000</text>
+<text x="766" y="239" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0001</text>
+<text x="766" y="304" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0011</text>
+<text x="766" y="404" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0010</text>
+<text x="766" y="549" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0100</text>
+<text x="766" y="599" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0101</text>
+<text x="766" y="644" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">other</text>
+<text x="766" y="416" font-size="11" text-anchor="start" font-weight="bold" fill="#111827">0110</text>
+<polyline points="410,170 760,170" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="163" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">AND</text>
+<line x1="464" y1="178" x2="476" y2="162" stroke="#1f2937" stroke-width="1.5"/>
+<text x="470" y="159" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="415,235 760,235" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="228" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">OR</text>
+<line x1="469" y1="243" x2="481" y2="227" stroke="#1f2937" stroke-width="1.5"/>
+<text x="475" y="224" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="423,300 760,300" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="293" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">XOR</text>
+<line x1="477" y1="308" x2="489" y2="292" stroke="#1f2937" stroke-width="1.5"/>
+<text x="483" y="289" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="600,400 760,400" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="393" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">sum (ADD, SUB)</text>
+<text x="730" y="645" font-size="13" text-anchor="end" font-weight="bold" fill="#111827">0</text>
+<polyline points="735,640 760,640" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="795" y="118" font-size="12" text-anchor="middle" font-weight="normal" fill="#374151" font-style="italic">result mux</text>
+<text x="40" y="725" font-size="15" text-anchor="start" font-weight="bold" fill="#111827">ALUControl[3:0]</text>
+<polyline points="170,720 795,720 795,647" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="214" y1="728" x2="226" y2="712" stroke="#1f2937" stroke-width="1.5"/>
+<text x="220" y="709" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">4</text>
+<circle cx="405" cy="720" r="4" fill="#1f2937"/>
+<polyline points="405,720 405,677" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="305" y="640" width="200" height="36" rx="6" fill="#ede9fe" stroke="#1f2937" stroke-width="2"/>
+<text x="405.0" y="662.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">SUB = (ALUControl == 0110)</text>
+<polyline points="405,640 405,442" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="412" y="625" font-size="12" text-anchor="start" font-weight="bold" fill="#5b21b6">SUB</text>
+<text x="412" y="462" font-size="11" text-anchor="start" font-weight="normal" fill="#5b21b6">select</text>
+<text x="800" y="690" font-size="11" text-anchor="start" font-weight="normal" fill="#374151">select</text>
+<circle cx="405" cy="478" r="4" fill="#1f2937"/>
+<polyline points="405,478 455,478 455,445 480,445" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="462" y="492" font-size="11" text-anchor="start" font-weight="normal" fill="#5b21b6">Cin = SUB</text>
+<polyline points="570,460 570,476" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+<text x="578" y="478" font-size="11" text-anchor="start" font-weight="normal" fill="#6b7280">Cout (unused)</text>
+<polyline points="250,545 480,545" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<polyline points="280,595 480,595" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<line x1="324" y1="603" x2="336" y2="587" stroke="#1f2937" stroke-width="1.5"/>
+<text x="330" y="584" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">5</text>
+<text x="292" y="613" font-size="11" text-anchor="start" font-weight="normal" fill="#111827">B[4:0] = shamt</text>
+<rect x="480" y="520" width="120" height="100" rx="6" fill="#dcfce7" stroke="#1f2937" stroke-width="2"/>
+<text x="540.0" y="551.7" font-size="12" text-anchor="middle" font-weight="bold" fill="#111827">Barrel shifter</text>
+<text x="540.0" y="566.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">A &lt;&lt; shamt</text>
+<text x="540.0" y="581.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">A &gt;&gt; shamt</text>
+<text x="540.0" y="596.7" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827">(logical)</text>
+<polyline points="600,545 760,545" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="538" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">SLL</text>
+<line x1="654" y1="553" x2="666" y2="537" stroke="#1f2937" stroke-width="1.5"/>
+<text x="660" y="534" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="600,595 760,595" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="744" y="588" font-size="12" text-anchor="end" font-weight="normal" fill="#111827">SRL</text>
+<line x1="654" y1="603" x2="666" y2="587" stroke="#1f2937" stroke-width="1.5"/>
+<text x="660" y="584" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<polyline points="830,400 1000,400" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1008" y="405" font-size="15" text-anchor="start" font-weight="bold" fill="#111827">ALUResult</text>
+<text x="1008" y="423" font-size="13" text-anchor="start" font-weight="bold" fill="#111827">[31:0]</text>
+<line x1="854" y1="408" x2="866" y2="392" stroke="#1f2937" stroke-width="1.5"/>
+<text x="860" y="389" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32</text>
+<circle cx="890" cy="400" r="4" fill="#1f2937"/>
+<polyline points="890,400 890,480 907,480" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M 900,460 Q 915,480 900,500 Q 940,500 955,480 Q 940,460 900,460 z" fill="#fee2e2" stroke="#1f2937" stroke-width="2"/>
+<circle cx="959" cy="480" r="4" fill="white" stroke="#1f2937" stroke-width="2"/>
+<polyline points="963,480 1000,480" fill="none" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1008" y="485" font-size="15" text-anchor="start" font-weight="bold" fill="#111827">Zero</text>
+<text x="930" y="516" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">32-input NOR:</text>
+<text x="930" y="530" font-size="11" text-anchor="middle" font-weight="normal" fill="#111827">Zero = (ALUResult == 0)</text>
+<rect x="850" y="560" width="230" height="150" rx="6" fill="#fffbeb" stroke="#1f2937" stroke-width="2"/>
+<text x="965.0" y="594.2" font-size="12" text-anchor="middle" font-weight="bold" fill="#111827">ALUControl encoding</text>
+<text x="965.0" y="609.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">0000 AND    0001 OR </text>
+<text x="965.0" y="624.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">0010 ADD    0110 SUB</text>
+<text x="965.0" y="639.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">0011 XOR    others 0</text>
+<text x="965.0" y="654.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">0100 SLL    0101 SRL</text>
+<text x="965.0" y="669.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">BEQ = SUB, taken if </text>
+<text x="965.0" y="684.2" font-size="12" text-anchor="middle" font-weight="normal" fill="#111827" xml:space="preserve" style="white-space:pre" font-family="DejaVu Sans Mono, Consolas, monospace">Zero = 1            </text>
+</svg>
